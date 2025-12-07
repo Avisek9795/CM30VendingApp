@@ -1,0 +1,39 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    namespace 'com.example.cm30vendingapp'
+    compileSdk 34
+
+    defaultConfig {
+        applicationId "com.example.cm30vendingapp"
+        minSdk 30
+        targetSdk 34
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release { minifyEnabled false }
+    }
+}
+
+repositories {
+    google()
+    mavenCentral()
+    flatDir { dirs 'libs' }
+}
+
+dependencies {
+    implementation(name: 'CashlessLibrary-2.0.1', ext: 'aar')
+    implementation(name: 'CM30-HardwareLibrary-1.0.9', ext: 'aar')
+    implementation(name: 'Paylib-debug', ext: 'aar')
+    implementation 'com.google.android.material:material:1.9.0'
+    implementation 'androidx.gridlayout:gridlayout:1.0.0'
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation 'androidx.cardview:cardview:1.0.0'
+    implementation 'com.airbnb.android:lottie:6.0.0'
+}

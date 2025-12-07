@@ -1,0 +1,2 @@
+rootProject.name = "CM30VendingApp"
+include ':app'
